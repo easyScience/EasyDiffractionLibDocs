@@ -24,7 +24,7 @@ from easyCore.Fitting.Fitting import Fitter
 from easyDiffractionLib import Site, Phase, Phases
 from easyDiffractionLib.sample import Sample as Job
 from easyDiffractionLib.interface import InterfaceFactory as Calculator
-from easyDiffractionLib.Elements.Experiments.Pattern import Pattern1D
+from easyDiffractionLib.elements.Experiments.Pattern import Pattern1D
 from easyDiffractionLib.Profiles.P1D import Instrument1DCWParameters as CWParams
 from easyDiffractionLib.Profiles.P1D import Instrument1DTOFParameters as TOFParams
 from easyDiffractionLib.Profiles.P1D import Powder1DParameters
