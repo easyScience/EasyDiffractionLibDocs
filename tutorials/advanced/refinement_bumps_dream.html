@@ -331,12 +331,12 @@ ImportError for wx/mpl in GSASIIctrlGUI: ignore if docs build
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load cif</span>
-<span class="n">cif_fname</span> <span class="o">=</span> <span class="s1">&#39;../data/PbSO4.cif&#39;</span>
+<span class="n">cif_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/PbSO4.cif&#39;</span>
 <span class="n">phases</span> <span class="o">=</span> <span class="n">Phases</span><span class="o">.</span><span class="n">from_cif_file</span><span class="p">(</span><span class="n">cif_fname</span><span class="p">)</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># load diffraction data</span>
-<span class="n">meas_fname</span> <span class="o">=</span> <span class="s1">&#39;../data/D1A@ILL.xye&#39;</span>
+<span class="n">meas_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/D1A@ILL.xye&#39;</span>
 <span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">meas_e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">meas_fname</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meas_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">meas_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>

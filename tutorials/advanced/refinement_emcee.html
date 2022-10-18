@@ -370,22 +370,22 @@ title="Print to PDF"
 </ul>
 <p><strong>Goal:</strong> Finding the posterior probability distribution over parameters, <span class="math notranslate nohighlight">\(P(\boldsymbol{x}|D)\)</span>,  given some data D  and prior knowledge.</p>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0d006dc7-0566-4cc9-bcda-2f8cd86c9310">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0d006dc7-0566-4cc9-bcda-2f8cd86c9310" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-21cc862a-5dbd-4d54-ad2f-0c36a5889b85">
+<span class="eqno">(1)<a class="headerlink" href="#equation-21cc862a-5dbd-4d54-ad2f-0c36a5889b85" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood-iid-normal-errors">
 <h3>Likelihood IID normal errors<a class="headerlink" href="#likelihood-iid-normal-errors" title="Permalink to this headline">#</a></h3>
 <p>Identical and independent normal distributed errors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43b49569-2965-4336-8c3b-b2f06768c0bb">
-<span class="eqno">(2)<a class="headerlink" href="#equation-43b49569-2965-4336-8c3b-b2f06768c0bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a07f6fb1-9e83-4179-af65-b12de0766dd0">
+<span class="eqno">(2)<a class="headerlink" href="#equation-a07f6fb1-9e83-4179-af65-b12de0766dd0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 y_\text{exp,i} = y_\text{sim,i} + \epsilon_i, \quad \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2)
 \end{equation}\]</div>
 <p>meaning</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bce03a34-a816-4cf8-a58a-ce02a2f41927">
-<span class="eqno">(3)<a class="headerlink" href="#equation-bce03a34-a816-4cf8-a58a-ce02a2f41927" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e00767ab-aef6-403f-9ad6-2aafbf40227a">
+<span class="eqno">(3)<a class="headerlink" href="#equation-e00767ab-aef6-403f-9ad6-2aafbf40227a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target} - \boldsymbol{y}_\text{model}\vert\vert^2/2\sigma^2 \right )}
 \end{equation}\]</div>
@@ -393,8 +393,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood-with-heteroscedasticity">
 <h3>Likelihood with heteroscedasticity<a class="headerlink" href="#likelihood-with-heteroscedasticity" title="Permalink to this headline">#</a></h3>
 <p>Including heteroscedasticity via another approach (common for count data?) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fbdc3fca-a3f5-45d4-a1f9-566035917340">
-<span class="eqno">(4)<a class="headerlink" href="#equation-fbdc3fca-a3f5-45d4-a1f9-566035917340" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ff28fc0c-b810-407a-9cb6-87c61e4d268e">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ff28fc0c-b810-407a-9cb6-87c61e4d268e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = y_\text{exp,i}).
 \end{equation}\]</div>
@@ -402,8 +402,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this headline">#</a></h3>
 <p>From paper “Use of Bayesian Inference in Crystallographic Structure Refinement via Full Diffraction Profile Analysis” (doi: https://doi.org/10.1038/srep31625), they use something along the lines of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-676af826-de2b-40fa-a24f-1a12e59c4671">
-<span class="eqno">(5)<a class="headerlink" href="#equation-676af826-de2b-40fa-a24f-1a12e59c4671" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-befe7d19-64c5-488b-819c-a6ec68c5935b">
+<span class="eqno">(5)<a class="headerlink" href="#equation-befe7d19-64c5-488b-819c-a6ec68c5935b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = \sigma^2 \cdot y_\text{exp,i}).
 \end{equation}\]</div>
@@ -496,12 +496,12 @@ ImportError for wx/mpl in GSASIIctrlGUI: ignore if docs build
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load cif</span>
-<span class="n">cif_fname</span> <span class="o">=</span> <span class="s1">&#39;../data/PbSO4.cif&#39;</span>
+<span class="n">cif_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/PbSO4.cif&#39;</span>
 <span class="n">phases</span> <span class="o">=</span> <span class="n">Phases</span><span class="o">.</span><span class="n">from_cif_file</span><span class="p">(</span><span class="n">cif_fname</span><span class="p">)</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># load diffraction data</span>
-<span class="n">meas_fname</span> <span class="o">=</span> <span class="s1">&#39;../data/D1A@ILL.xye&#39;</span>
+<span class="n">meas_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/D1A@ILL.xye&#39;</span>
 <span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">meas_e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">meas_fname</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meas_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">meas_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
