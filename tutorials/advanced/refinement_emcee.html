@@ -115,11 +115,6 @@
      Simulation of the diffraction pattern
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basic/fitting.html">
-     Fitting to the experimental data
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -370,22 +365,22 @@ title="Print to PDF"
 </ul>
 <p><strong>Goal:</strong> Finding the posterior probability distribution over parameters, <span class="math notranslate nohighlight">\(P(\boldsymbol{x}|D)\)</span>,  given some data D  and prior knowledge.</p>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fdc56f15-a335-456f-a770-e25e4a1d27a9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-fdc56f15-a335-456f-a770-e25e4a1d27a9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a2dc43db-d050-4da7-b6ef-cd83458dbac2">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a2dc43db-d050-4da7-b6ef-cd83458dbac2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood-iid-normal-errors">
 <h3>Likelihood IID normal errors<a class="headerlink" href="#likelihood-iid-normal-errors" title="Permalink to this headline">#</a></h3>
 <p>Identical and independent normal distributed errors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90fe263d-00b9-4eda-a2b2-2efd9725f2f5">
-<span class="eqno">(2)<a class="headerlink" href="#equation-90fe263d-00b9-4eda-a2b2-2efd9725f2f5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-aadb63bf-d651-4bd4-bd86-0665ee0f11ce">
+<span class="eqno">(2)<a class="headerlink" href="#equation-aadb63bf-d651-4bd4-bd86-0665ee0f11ce" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 y_\text{exp,i} = y_\text{sim,i} + \epsilon_i, \quad \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2)
 \end{equation}\]</div>
 <p>meaning</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87c34a3c-55df-4411-874c-3db70dda8d61">
-<span class="eqno">(3)<a class="headerlink" href="#equation-87c34a3c-55df-4411-874c-3db70dda8d61" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fe6cd859-0c05-467b-8363-4401949f7489">
+<span class="eqno">(3)<a class="headerlink" href="#equation-fe6cd859-0c05-467b-8363-4401949f7489" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target} - \boldsymbol{y}_\text{model}\vert\vert^2/2\sigma^2 \right )}
 \end{equation}\]</div>
@@ -393,8 +388,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood-with-heteroscedasticity">
 <h3>Likelihood with heteroscedasticity<a class="headerlink" href="#likelihood-with-heteroscedasticity" title="Permalink to this headline">#</a></h3>
 <p>Including heteroscedasticity via another approach (common for count data?) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f7dc9139-9fd7-4a89-ada4-b7f827453f47">
-<span class="eqno">(4)<a class="headerlink" href="#equation-f7dc9139-9fd7-4a89-ada4-b7f827453f47" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4bf73095-8d3f-433d-8aa8-d375abc772b5">
+<span class="eqno">(4)<a class="headerlink" href="#equation-4bf73095-8d3f-433d-8aa8-d375abc772b5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = y_\text{exp,i}).
 \end{equation}\]</div>
@@ -402,8 +397,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this headline">#</a></h3>
 <p>From paper “Use of Bayesian Inference in Crystallographic Structure Refinement via Full Diffraction Profile Analysis” (doi: https://doi.org/10.1038/srep31625), they use something along the lines of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5318f789-8c75-44fb-8c7a-763959445e72">
-<span class="eqno">(5)<a class="headerlink" href="#equation-5318f789-8c75-44fb-8c7a-763959445e72" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0f007aa8-6c0f-4a4e-9292-2cdfbdd2a0ae">
+<span class="eqno">(5)<a class="headerlink" href="#equation-0f007aa8-6c0f-4a4e-9292-2cdfbdd2a0ae" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = \sigma^2 \cdot y_\text{exp,i}).
 \end{equation}\]</div>
