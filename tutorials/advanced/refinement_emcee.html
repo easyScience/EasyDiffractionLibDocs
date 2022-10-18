@@ -370,22 +370,22 @@ title="Print to PDF"
 </ul>
 <p><strong>Goal:</strong> Finding the posterior probability distribution over parameters, <span class="math notranslate nohighlight">\(P(\boldsymbol{x}|D)\)</span>,  given some data D  and prior knowledge.</p>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21cc862a-5dbd-4d54-ad2f-0c36a5889b85">
-<span class="eqno">(1)<a class="headerlink" href="#equation-21cc862a-5dbd-4d54-ad2f-0c36a5889b85" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1209ac1e-a85f-4b5a-8905-a78fd04745ab">
+<span class="eqno">(1)<a class="headerlink" href="#equation-1209ac1e-a85f-4b5a-8905-a78fd04745ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood-iid-normal-errors">
 <h3>Likelihood IID normal errors<a class="headerlink" href="#likelihood-iid-normal-errors" title="Permalink to this headline">#</a></h3>
 <p>Identical and independent normal distributed errors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a07f6fb1-9e83-4179-af65-b12de0766dd0">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a07f6fb1-9e83-4179-af65-b12de0766dd0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5a3cf383-884f-44d1-ae25-c8d0e3173863">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5a3cf383-884f-44d1-ae25-c8d0e3173863" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 y_\text{exp,i} = y_\text{sim,i} + \epsilon_i, \quad \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2)
 \end{equation}\]</div>
 <p>meaning</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e00767ab-aef6-403f-9ad6-2aafbf40227a">
-<span class="eqno">(3)<a class="headerlink" href="#equation-e00767ab-aef6-403f-9ad6-2aafbf40227a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-53e60b99-a27a-4833-a0c8-3b40739ef150">
+<span class="eqno">(3)<a class="headerlink" href="#equation-53e60b99-a27a-4833-a0c8-3b40739ef150" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target} - \boldsymbol{y}_\text{model}\vert\vert^2/2\sigma^2 \right )}
 \end{equation}\]</div>
@@ -393,8 +393,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood-with-heteroscedasticity">
 <h3>Likelihood with heteroscedasticity<a class="headerlink" href="#likelihood-with-heteroscedasticity" title="Permalink to this headline">#</a></h3>
 <p>Including heteroscedasticity via another approach (common for count data?) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff28fc0c-b810-407a-9cb6-87c61e4d268e">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ff28fc0c-b810-407a-9cb6-87c61e4d268e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6e4a70be-0aa5-4cc6-a81c-7534dc72854d">
+<span class="eqno">(4)<a class="headerlink" href="#equation-6e4a70be-0aa5-4cc6-a81c-7534dc72854d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = y_\text{exp,i}).
 \end{equation}\]</div>
@@ -402,8 +402,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this headline">#</a></h3>
 <p>From paper “Use of Bayesian Inference in Crystallographic Structure Refinement via Full Diffraction Profile Analysis” (doi: https://doi.org/10.1038/srep31625), they use something along the lines of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-befe7d19-64c5-488b-819c-a6ec68c5935b">
-<span class="eqno">(5)<a class="headerlink" href="#equation-befe7d19-64c5-488b-819c-a6ec68c5935b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-24a9c248-a8db-4a15-b471-816f39cb89bf">
+<span class="eqno">(5)<a class="headerlink" href="#equation-24a9c248-a8db-4a15-b471-816f39cb89bf" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = \sigma^2 \cdot y_\text{exp,i}).
 \end{equation}\]</div>
