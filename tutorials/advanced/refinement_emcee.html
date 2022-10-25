@@ -155,8 +155,18 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../developer/cfml.html">
-     Try X-ray and Neutron options of CrysFML
+    <a class="reference internal" href="../developer/cfml_cif-vs-code.html">
+     CrysFML: CIF-based vs file-less interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developer/cfml_neutrons-vs-xrays.html">
+     CrysFML: Neutrons vs X-rays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developer/cfml_xrays-vs-neutrons.html">
+     CrysFML: X-rays vs Neutrons
     </a>
    </li>
   </ul>
@@ -387,22 +397,22 @@ title="Print to PDF"
 </ul>
 <p><strong>Goal:</strong> Finding the posterior probability distribution over parameters, <span class="math notranslate nohighlight">\(P(\boldsymbol{x}|D)\)</span>,  given some data D  and prior knowledge.</p>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1cbf9927-f6af-497d-b566-23407432b669">
-<span class="eqno">(1)<a class="headerlink" href="#equation-1cbf9927-f6af-497d-b566-23407432b669" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6b69aa19-bf80-49a9-8cd4-1ccd2b923412">
+<span class="eqno">(1)<a class="headerlink" href="#equation-6b69aa19-bf80-49a9-8cd4-1ccd2b923412" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood-iid-normal-errors">
 <h3>Likelihood IID normal errors<a class="headerlink" href="#likelihood-iid-normal-errors" title="Permalink to this headline">#</a></h3>
 <p>Identical and independent normal distributed errors</p>
-<div class="amsmath math notranslate nohighlight" id="equation-713e29cd-49a1-4a8f-b70a-536406b35de9">
-<span class="eqno">(2)<a class="headerlink" href="#equation-713e29cd-49a1-4a8f-b70a-536406b35de9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b841ee1b-4fac-415f-9d63-a1315dfd3fde">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b841ee1b-4fac-415f-9d63-a1315dfd3fde" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 y_\text{exp,i} = y_\text{sim,i} + \epsilon_i, \quad \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2)
 \end{equation}\]</div>
 <p>meaning</p>
-<div class="amsmath math notranslate nohighlight" id="equation-890b6cd7-700b-499e-999a-289ba6c74792">
-<span class="eqno">(3)<a class="headerlink" href="#equation-890b6cd7-700b-499e-999a-289ba6c74792" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1378c640-dd01-4bff-aa36-41dc4981e190">
+<span class="eqno">(3)<a class="headerlink" href="#equation-1378c640-dd01-4bff-aa36-41dc4981e190" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target} - \boldsymbol{y}_\text{model}\vert\vert^2/2\sigma^2 \right )}
 \end{equation}\]</div>
@@ -410,8 +420,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood-with-heteroscedasticity">
 <h3>Likelihood with heteroscedasticity<a class="headerlink" href="#likelihood-with-heteroscedasticity" title="Permalink to this headline">#</a></h3>
 <p>Including heteroscedasticity via another approach (common for count data?) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7de53c9-f5a4-40f8-9e67-cb5d8cfe027f">
-<span class="eqno">(4)<a class="headerlink" href="#equation-b7de53c9-f5a4-40f8-9e67-cb5d8cfe027f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a4677625-e858-46d6-91ea-64c5f79efd53">
+<span class="eqno">(4)<a class="headerlink" href="#equation-a4677625-e858-46d6-91ea-64c5f79efd53" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = y_\text{exp,i}).
 \end{equation}\]</div>
@@ -419,8 +429,8 @@ P(D|\boldsymbol{x}) \propto \exp{\left (-\vert\vert \boldsymbol{y}_\text{target}
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this headline">#</a></h3>
 <p>From paper “Use of Bayesian Inference in Crystallographic Structure Refinement via Full Diffraction Profile Analysis” (doi: https://doi.org/10.1038/srep31625), they use something along the lines of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1275e01-7298-48d1-8f29-467a08c11f83">
-<span class="eqno">(5)<a class="headerlink" href="#equation-b1275e01-7298-48d1-8f29-467a08c11f83" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26c12851-4547-480b-b53a-032a98a6053d">
+<span class="eqno">(5)<a class="headerlink" href="#equation-26c12851-4547-480b-b53a-032a98a6053d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \epsilon_i \sim \mathcal{N}(\mu=0, \sigma^2_i = \sigma^2 \cdot y_\text{exp,i}).
 \end{equation}\]</div>
