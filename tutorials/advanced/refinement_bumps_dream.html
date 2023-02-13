@@ -4,38 +4,44 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Refinement with bumps-dream PbSO4 &#8212; EasyDiffraction 0.1 documentation</title>
+    <title>Refinement of PbSO4 with bumps-DREAM &#8212; EasyDiffraction 0.1 documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      
+  
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Developer tutorials" href="../developer/index.html" />
-    <link rel="prev" title="Refinement with emcee: Neutron data for PbSO4" href="refinement_emcee.html" />
+    <link rel="prev" title="Refinement of PbSO4 with emcee" href="refinement_emcee.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -43,7 +49,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
 <!-- Checkboxes to toggle the left sidebar -->
 <input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
 <label class="overlay overlay-navbar" for="__navigation">
@@ -92,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p>
  <span class="caption-text">
   Tutorials
  </span>
@@ -131,13 +137,23 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="analyze_refinement_results.html">
+     Analysis of PbSO4 refinement results
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="refinement_least_squares.html">
+     Refinement of PbSO4 with least-squares
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="refinement_emcee.html">
-     Refinement with emcee: Neutron data for PbSO4
+     Refinement of PbSO4 with emcee
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Refinement with bumps-dream PbSO4
+     Refinement of PbSO4 with bumps-DREAM
     </a>
    </li>
   </ul>
@@ -304,23 +320,120 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#helper-functions">
+   Helper functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-the-data-and-setup-job">
+   Load the data and setup Job
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-which-parameters-to-refine">
+   Define which parameters to refine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diffraction-pattern-before-fitting">
+   Diffraction pattern before fitting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-with-bumps-dream">
+   Fitting with bumps-dream
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summarize-the-refined-parameters">
+   Summarize the refined parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-of-the-mcmc-data">
+   Analysis of the MCMC data
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Refinement with bumps-dream PbSO4</h1>
+                <h1>Refinement of PbSO4 with bumps-DREAM</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#helper-functions">
+   Helper functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-the-data-and-setup-job">
+   Load the data and setup Job
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-which-parameters-to-refine">
+   Define which parameters to refine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diffraction-pattern-before-fitting">
+   Diffraction pattern before fitting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-with-bumps-dream">
+   Fitting with bumps-dream
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summarize-the-refined-parameters">
+   Summarize the refined parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-of-the-mcmc-data">
+   Analysis of the MCMC data
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -328,16 +441,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="refinement-with-bumps-dream-pbso4">
-<h1>Refinement with bumps-dream PbSO4<a class="headerlink" href="#refinement-with-bumps-dream-pbso4" title="Permalink to this headline">#</a></h1>
+  <section id="refinement-of-pbso4-with-bumps-dream">
+<h1>Refinement of PbSO4 with bumps-DREAM<a class="headerlink" href="#refinement-of-pbso4-with-bumps-dream" title="Permalink to this headline">¶</a></h1>
+<p>In this example we will refine the neutron data for PbSO4 using the DREAM (DiffeRential Evolution Adaptive Metropolis) algorithm as implemented in <code class="docutils literal notranslate"><span class="pre">bumps</span></code>.</p>
+<p>See the <a class="reference external" href="https://bumps.readthedocs.io/en/latest/">bumps documentation</a> for more details on DREAM.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># esyScience, technique-independent</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-
 <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">)</span>
 
 <span class="c1"># esyScience, diffraction</span>
@@ -353,68 +465,79 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GSAS-II binary directory: /home/erikfr/.local/lib/python3.8/site-packages/GSASII/bindist
-ImportError for wx/mpl in GSASIIctrlGUI: ignore if docs build
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># esyScience, diffraction</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<section id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># help functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># helper functions</span>
 
 <span class="k">def</span> <span class="nf">print_parameters</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">zero_shift</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_u</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_v</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_w</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Print all fit-parameters in job. &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">get_fit_parameters</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     
 
-<span class="k">def</span> <span class="nf">compute_rmse</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
-    <span class="n">delta_y</span> <span class="o">=</span> <span class="n">y1</span><span class="o">-</span><span class="n">y2</span>
+<span class="k">def</span> <span class="nf">compute_rmse</span><span class="p">(</span><span class="n">y_target</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute root mean squared error (RMSE) between target and predicted values &quot;&quot;&quot;</span>
+    <span class="n">delta_y</span> <span class="o">=</span> <span class="n">y_target</span> <span class="o">-</span> <span class="n">y_predicted</span>
     <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">delta_y</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">rmse</span>
+
+<span class="k">def</span> <span class="nf">compute_mse_weighted</span><span class="p">(</span><span class="n">y_target</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute the weighted mean squared error. (weighting by y_target) &quot;&quot;&quot;</span>
+    <span class="n">delta_y</span> <span class="o">=</span> <span class="n">y_target</span> <span class="o">-</span> <span class="n">y_predicted</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">y_target</span>
+    <span class="n">mse_weighted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">delta_y</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">weight</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mse_weighted</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="load-the-data-and-setup-job">
+<h2>Load the data and setup Job<a class="headerlink" href="#load-the-data-and-setup-job" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load cif</span>
 <span class="n">cif_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/PbSO4.cif&#39;</span>
 <span class="n">phases</span> <span class="o">=</span> <span class="n">Phases</span><span class="o">.</span><span class="n">from_cif_file</span><span class="p">(</span><span class="n">cif_fname</span><span class="p">)</span>
-<span class="n">phase</span> <span class="o">=</span> <span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># load diffraction data</span>
 <span class="n">meas_fname</span> <span class="o">=</span> <span class="s1">&#39;../datasets/neutron_powder_PbSO4/D1A@ILL.xye&#39;</span>
 <span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">meas_e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">meas_fname</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meas_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">meas_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2201,) (2201,)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># setup interface to CrysFML and job</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data shape:&#39;</span><span class="p">,</span> <span class="n">meas_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">meas_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># setup interface to CrysPy and Job</span>
 <span class="n">calculator</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">interface_name</span><span class="o">=</span><span class="s1">&#39;CrysPy&#39;</span><span class="p">)</span>
-<span class="n">job</span> <span class="o">=</span> <span class="n">Job</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="n">phases</span><span class="p">,</span> <span class="n">interface</span><span class="o">=</span><span class="n">calculator</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">Job</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="n">phases</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">CWParams</span><span class="p">(),</span> <span class="n">interface</span><span class="o">=</span><span class="n">calculator</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temp CIF: /tmp/easydiffraction_temp.cif
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data shape: (2201,) (2201,)
+Temp CIF: /tmp/easydiffraction_temp.cif
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="define-which-parameters-to-refine">
+<h2>Define which parameters to refine<a class="headerlink" href="#define-which-parameters-to-refine" title="Permalink to this headline">¶</a></h2>
+<p>Here the parameters to be refined are determined, and initial values are set rather close to the optimal solution in order for bumps-dream to converge quicker.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># setup </span>
@@ -436,239 +559,322 @@ ImportError for wx/mpl in GSASIIctrlGUI: ignore if docs build
 <span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="c1"># set reasonable initial parameter values</span>
-<span class="n">job</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">zero_shift</span> <span class="o">=</span> <span class="mf">0.125</span>
-<span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_u</span> <span class="o">=</span> <span class="mf">0.17</span>
-<span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_v</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.38</span>
-<span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_w</span> <span class="o">=</span> <span class="mf">0.4</span>
-<span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">218</span>
-<span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">230</span>
+<span class="n">job</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">length_a</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">job</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">length_b</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">job</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cell</span><span class="o">.</span><span class="n">length_c</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># set reasonable initial parameter values to make MCMC converge faster</span>
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">zero_shift</span> <span class="o">=</span> <span class="mf">0.12</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_u</span> <span class="o">=</span> <span class="mf">0.15</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_v</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.4</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">resolution_w</span> <span class="o">=</span> <span class="mf">0.4</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">backgrounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">250</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial parameters&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial parameters:&#39;</span><span class="p">)</span>
 <span class="n">print_parameters</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">get_fit_parameters</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial parameters
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial parameters:
+&lt;Parameter &#39;length_a&#39;: 8.48+/-0 Å, bounds=[0:inf]&gt;
+&lt;Parameter &#39;length_b&#39;: 5.398+/-0 Å, bounds=[0:inf]&gt;
+&lt;Parameter &#39;length_c&#39;: 6.958+/-0 Å, bounds=[0:inf]&gt;
 &lt;Parameter &#39;scale&#39;: 1.0+/-0, bounds=[0:inf]&gt;
-&lt;Parameter &#39;zero_shift&#39;: 0.125+/-0, bounds=[-inf:inf]&gt;
-&lt;Parameter &#39;resolution_u&#39;: 0.17+/-0, bounds=[-inf:inf]&gt;
-&lt;Parameter &#39;resolution_v&#39;: -0.38+/-0, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;resolution_u&#39;: 0.15+/-0, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;resolution_v&#39;: -0.4+/-0, bounds=[-inf:inf]&gt;
 &lt;Parameter &#39;resolution_w&#39;: 0.4+/-0, bounds=[-inf:inf]&gt;
-&lt;BackgroundPoint &#39;10,0_deg&#39;: 200.0+/-0, bounds=[-inf:inf]&gt;
-&lt;BackgroundPoint &#39;120,0_deg&#39;: 250.0+/-0, bounds=[-inf:inf]&gt;
-[&lt;Parameter &#39;scale&#39;: 1.0+/-0, bounds=[0:inf]&gt;, &lt;Parameter &#39;resolution_u&#39;: 0.17+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;resolution_v&#39;: -0.38+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;resolution_w&#39;: 0.4+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;zero_shift&#39;: 0.125+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;intensity&#39;: 200.0+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;intensity&#39;: 250.0+/-0, bounds=[-inf:inf]&gt;]
+&lt;Parameter &#39;zero_shift&#39;: 0.12+/-0, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;intensity&#39;: 200.0+/-0, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;intensity&#39;: 250.0+/-0, bounds=[-inf:inf]&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_parameters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">get_fit_parameters</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of parameters: </span><span class="si">{</span><span class="n">n_parameters</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of parameters: 10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="diffraction-pattern-before-fitting">
+<h2>Diffraction pattern before fitting<a class="headerlink" href="#diffraction-pattern-before-fitting" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initial before fit</span>
 <span class="n">y_initial</span> <span class="o">=</span> <span class="n">calculator</span><span class="o">.</span><span class="n">fit_func</span><span class="p">(</span><span class="n">meas_x</span><span class="p">)</span>
 <span class="n">rmse_initial</span> <span class="o">=</span> <span class="n">compute_rmse</span><span class="p">(</span><span class="n">meas_y</span><span class="p">,</span> <span class="n">y_initial</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial RMSE:&#39;</span><span class="p">,</span> <span class="n">rmse_initial</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_initial</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
+<span class="n">msew_initial</span> <span class="o">=</span> <span class="n">compute_mse_weighted</span><span class="p">(</span><span class="n">meas_y</span><span class="p">,</span> <span class="n">y_initial</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Initial: RMSE </span><span class="si">{</span><span class="n">rmse_initial</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, MSE-weighted </span><span class="si">{</span><span class="n">msew_initial</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exp&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">y_initial</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Initial&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial RMSE: 70.1800916332574
-[200.05681818 200.07954545 200.10227273 ... 267.55966248 276.31576712
- 290.51558237]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial: RMSE 67.571, MSE-weighted 6.257
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa873ddcb80&gt;
-</pre></div>
-</div>
-<img alt="../../_images/dcfb257c3574e663572db97fb30774d7a2dc4a9448051e7b9e3ec852f3c2c39c.png" src="../../_images/dcfb257c3574e663572db97fb30774d7a2dc4a9448051e7b9e3ec852f3c2c39c.png" />
+<img alt="../../_images/refinement_bumps_dream_10_1.png" src="../../_images/refinement_bumps_dream_10_1.png" />
 </div>
 </div>
+</section>
+<section id="fitting-with-bumps-dream">
+<h2>Fitting with bumps-dream<a class="headerlink" href="#fitting-with-bumps-dream" title="Permalink to this headline">¶</a></h2>
+<p>First, we switch the fit engine to bumps.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># setup fitting</span>
 <span class="n">fitter</span> <span class="o">=</span> <span class="n">Fitter</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">calculator</span><span class="o">.</span><span class="n">fit_func</span><span class="p">)</span>
 <span class="n">fitter</span><span class="o">.</span><span class="n">switch_engine</span><span class="p">(</span><span class="s1">&#39;bumps&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">get_fit_parameters</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;Parameter &#39;scale&#39;: 1.0+/-0, bounds=[0:inf]&gt;, &lt;Parameter &#39;resolution_u&#39;: 0.17+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;resolution_v&#39;: -0.38+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;resolution_w&#39;: 0.4+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;zero_shift&#39;: 0.125+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;intensity&#39;: 200.0+/-0, bounds=[-inf:inf]&gt;, &lt;Parameter &#39;intensity&#39;: 250.0+/-0, bounds=[-inf:inf]&gt;]
 </pre></div>
 </div>
 </div>
 </div>
+<p>Next, we define the hyper-parameters to be used for the bumps-dream fitting.<br />
+See the <a class="reference external" href="https://bumps.readthedocs.io/en/latest/">bumps documentation</a> for more details on the hyper-parameters.</p>
+<p>The MCMC is carried out by multiple independent “walkers”.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n_steps</span></code> sets how many steps/iterations each walker will carry out</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">burn</span></code> specifys how many of the initial steps to throw away (equilibration period)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pop</span></code> sets how many walkers to use, the total number of walkers will be number of parameters times <code class="docutils literal notranslate"><span class="pre">pop</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> is a convergence criterion</p></li>
+</ul>
+<p>Note also here that the weights are set to <code class="docutils literal notranslate"><span class="pre">sqrt(y)</span></code>, since weights will be passed as uncertainties to bumps.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bumps-dream fit</span>
-
-<span class="c1"># parameters</span>
-<span class="n">steps</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="n">burn</span> <span class="o">=</span> <span class="mi">50</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># parameters</span>
+<span class="n">n_steps</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">n_burn</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">thin</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">pop</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">pop</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">alpha</span><span class="o">=</span> <span class="mf">0.0001</span>
 
 <span class="c1"># weights</span>
 <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">meas_y</span><span class="p">)</span>  <span class="c1"># uncertainty in bumps (dy)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">meas_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">meas_y</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
 <span class="c1"># run</span>
-<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">steps</span><span class="p">,</span> <span class="n">burn</span><span class="o">=</span><span class="n">burn</span><span class="p">,</span> <span class="n">thin</span><span class="o">=</span><span class="n">thin</span><span class="p">,</span> <span class="n">pop</span><span class="o">=</span><span class="n">pop</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="n">n_steps</span><span class="o">*</span><span class="n">pop</span><span class="o">*</span><span class="n">n_parameters</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">n_steps</span><span class="p">,</span> <span class="n">burn</span><span class="o">=</span><span class="n">n_burn</span><span class="p">,</span> <span class="n">thin</span><span class="o">=</span><span class="n">thin</span><span class="p">,</span> <span class="n">pop</span><span class="o">=</span><span class="n">pop</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
               <span class="n">outliers</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
 <span class="n">result</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2201,) (2201,) (2201,)
-# steps: 500, # draws: 3500
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># steps: 5000, # draws: 100000
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="summarize-the-refined-parameters">
+<h2>Summarize the refined parameters<a class="headerlink" href="#summarize-the-refined-parameters" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print refined parameters</span>
 <span class="n">print_parameters</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Parameter &#39;scale&#39;: 1.208+/-0.009, bounds=[0:inf]&gt;
-&lt;Parameter &#39;zero_shift&#39;: 0.1224+/-0.0009, bounds=[-inf:inf]&gt;
-&lt;Parameter &#39;resolution_u&#39;: 0.198+/-0.027, bounds=[-inf:inf]&gt;
-&lt;Parameter &#39;resolution_v&#39;: -0.49+/-0.06, bounds=[-inf:inf]&gt;
-&lt;Parameter &#39;resolution_w&#39;: 0.485+/-0.032, bounds=[-inf:inf]&gt;
-&lt;BackgroundPoint &#39;10,0_deg&#39;: 196.9+/-1.5, bounds=[-inf:inf]&gt;
-&lt;BackgroundPoint &#39;120,0_deg&#39;: 240.0+/-3.4, bounds=[-inf:inf]&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># refined result</span>
 <span class="n">y_refined</span> <span class="o">=</span> <span class="n">calculator</span><span class="o">.</span><span class="n">fit_func</span><span class="p">(</span><span class="n">meas_x</span><span class="p">)</span>
 <span class="n">rmse_refined</span> <span class="o">=</span> <span class="n">compute_rmse</span><span class="p">(</span><span class="n">meas_y</span><span class="p">,</span> <span class="n">y_refined</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Refined RMSE:&#39;</span><span class="p">,</span> <span class="n">rmse_refined</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exp&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">y_refined</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Initial&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span> <span class="o">-</span> <span class="n">y_refined</span><span class="o">-</span><span class="mi">500</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Diff&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">msew_refined</span> <span class="o">=</span> <span class="n">compute_mse_weighted</span><span class="p">(</span><span class="n">meas_y</span><span class="p">,</span> <span class="n">y_refined</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Refined: RMSE </span><span class="si">{</span><span class="n">rmse_refined</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, MSE-weighted </span><span class="si">{</span><span class="n">msew_refined</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Refined RMSE: 46.473155516401725
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Parameter &#39;length_a&#39;: 8.47691+/-0.00016 Å, bounds=[0:inf]&gt;
+&lt;Parameter &#39;length_b&#39;: 5.39574+/-0.00012 Å, bounds=[0:inf]&gt;
+&lt;Parameter &#39;length_c&#39;: 6.95585+/-0.00019 Å, bounds=[0:inf]&gt;
+&lt;Parameter &#39;scale&#39;: 1.211+/-0.004, bounds=[0:inf]&gt;
+&lt;Parameter &#39;resolution_u&#39;: 0.196+/-0.010, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;resolution_v&#39;: -0.478+/-0.018, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;resolution_w&#39;: 0.480+/-0.007, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;zero_shift&#39;: 0.1572+/-0.0017, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;intensity&#39;: 197.2+/-0.7, bounds=[-inf:inf]&gt;
+&lt;Parameter &#39;intensity&#39;: 239.5+/-1.0, bounds=[-inf:inf]&gt;
+Refined: RMSE 44.105, MSE-weighted 3.420
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa873d7a490&gt;
-</pre></div>
-</div>
-<img alt="../../_images/ca58685b9fe4946e8bfa6cdde84d38a1060eb65e57ce50b56531642ee5b680af.png" src="../../_images/ca58685b9fe4946e8bfa6cdde84d38a1060eb65e57ce50b56531642ee5b680af.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract MCMC-results</span>
-<span class="kn">from</span> <span class="nn">bumps.dream.stats</span> <span class="kn">import</span> <span class="n">var_stats</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot refined diffraction pattern</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Exp&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">y_refined</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Simulated&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meas_x</span><span class="p">,</span> <span class="n">meas_y</span> <span class="o">-</span> <span class="n">y_refined</span><span class="o">-</span><span class="mi">500</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Diff&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/refinement_bumps_dream_17_0.png" src="../../_images/refinement_bumps_dream_17_0.png" />
+</div>
+</div>
+</section>
+<section id="analysis-of-the-mcmc-data">
+<h2>Analysis of the MCMC data<a class="headerlink" href="#analysis-of-the-mcmc-data" title="Permalink to this headline">¶</a></h2>
+<p>From a bumps-dream fit you will get the best-parameters and their uncertainty (as above), but you can also access the full MCMC data via the <code class="docutils literal notranslate"><span class="pre">result.engine_result.state</span></code>.</p>
+<p>This includes all the samples of the parameters and their corresponding log-posterior probability.</p>
+<p>Note that the parameters from bumps are in different order so first we need to find out which parameter is which.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bumps.dream.stats</span> <span class="kn">import</span> <span class="n">var_stats</span>
 
-<span class="n">steps</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">logp</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">engine_result</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">chains</span><span class="p">()</span>
+<span class="c1"># extract MCMC-data</span>
 <span class="n">state</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">engine_result</span><span class="o">.</span><span class="n">state</span>
+<span class="n">steps</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">logp</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">chains</span><span class="p">()</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="n">steps</span> <span class="o">/</span> <span class="n">pop</span> <span class="o">/</span> <span class="n">n_parameters</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;samples shape:&#39;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;logp shape:   &#39;</span><span class="p">,</span> <span class="n">logp</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
-
-<span class="c1"># analyze</span>
+<span class="c1"># collect the best parameters and their uncertainties</span>
 <span class="n">params</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">best</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">n_parameters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
 <span class="n">draw</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 <span class="n">vstats</span> <span class="o">=</span> <span class="n">var_stats</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
 <span class="n">stderrs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">v</span><span class="o">.</span><span class="n">p68</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span><span class="o">.</span><span class="n">p68</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vstats</span><span class="p">],</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
 
+<span class="c1"># translate parameter names </span>
+<span class="kn">from</span> <span class="nn">easyCore.Fitting.fitting_template</span> <span class="kn">import</span> <span class="n">NameConverter</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">labels</span>
+<span class="n">bumps_parameter_names</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">NameConverter</span><span class="p">()</span><span class="o">.</span><span class="n">get_name_from_key</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="n">bumps_parameter_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bumps parameter names&#39;</span><span class="p">,</span> <span class="n">bumps_parameter_names</span><span class="p">)</span>
 
-<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;scale&#39;</span><span class="p">,</span> <span class="s1">&#39;zero_shift&#39;</span><span class="p">,</span> <span class="s1">&#39;resolution_u&#39;</span><span class="p">,</span> <span class="s1">&#39;resolution_v&#39;</span><span class="p">,</span> <span class="s1">&#39;resolution_w&#39;</span><span class="p">,</span> <span class="s1">&#39;intensity&#39;</span><span class="p">,</span> <span class="s1">&#39;intensity&#39;</span><span class="p">]</span>
 
-
-<span class="k">def</span> <span class="nf">print_all_params</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">errs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">errs</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s1">15</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">12.5f</span><span class="si">}</span><span class="s1"> , err </span><span class="si">{</span><span class="n">e</span><span class="si">:</span><span class="s1">8.5f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">print_all_params</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">stderrs</span><span class="p">)</span>
-
-
-<span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:]</span>
-<span class="n">samples_flat</span> <span class="o">=</span> <span class="n">samples</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_parameters</span><span class="p">)</span>
+<span class="c1"># Save the data to be analyzed</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="n">bumps_parameter_names</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">steps</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="n">samples</span><span class="p">,</span> <span class="n">logp</span><span class="o">=</span><span class="n">logp</span><span class="p">)</span>
+<span class="n">parameter_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">err</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bumps_parameter_names</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">stderrs</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">parameter_dict</span><span class="p">:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;-1&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">:</span><span class="s1">15</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">val</span><span class="si">:</span><span class="s1">12.5f</span><span class="si">}</span><span class="s1"> , err </span><span class="si">{</span><span class="n">err</span><span class="si">:</span><span class="s1">8.5f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">parameter_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">,</span> <span class="n">err</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;parameters&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parameter_dict</span>
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;refinement_results/bumps_dream_steps</span><span class="si">{</span><span class="n">n_steps</span><span class="si">}</span><span class="s1">_burn</span><span class="si">{</span><span class="n">n_burn</span><span class="si">}</span><span class="s1">_pop</span><span class="si">{</span><span class="n">pop</span><span class="si">}</span><span class="s1">.npy&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scale               -0.48530 , err  0.05850
-zero_shift           0.48496 , err  0.03158
-resolution_u       239.99814 , err  3.44376
-resolution_v         1.20847 , err  0.00902
-resolution_w       196.92294 , err  1.50350
-intensity            0.12237 , err  0.00091
-intensity            0.19811 , err  0.02655
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bumps parameter names [&#39;scale&#39;, &#39;resolution_u&#39;, &#39;resolution_w&#39;, &#39;intensity&#39;, &#39;length_b&#39;, &#39;length_c&#39;, &#39;zero_shift&#39;, &#39;length_a&#39;, &#39;resolution_v&#39;, &#39;intensity&#39;]
+scale                1.21108 , err  0.00359
+resolution_u         0.19622 , err  0.01015
+resolution_w         0.48012 , err  0.00723
+intensity          197.23321 , err  0.73904
+length_b             5.39574 , err  0.00012
+length_c             6.95585 , err  0.00019
+zero_shift           0.15721 , err  0.00170
+length_a             8.47691 , err  0.00016
+resolution_v        -0.47782 , err  0.01849
+intensity-1        239.54249 , err  0.96345
 </pre></div>
 </div>
+</div>
+</div>
+<p>Next, we’ll plot the MCMC trajectory of the parameters for a few walkers</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot log posterior along MCMC runs</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">walker_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pop</span><span class="o">*</span><span class="n">n_parameters</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">logp</span><span class="p">[:,</span> <span class="n">walker_ind</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Walker </span><span class="si">{</span><span class="n">walker_ind</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Log posterior&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;MCMC iteration&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/refinement_bumps_dream_21_0.png" src="../../_images/refinement_bumps_dream_21_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the second (phase.scale) parameter</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="n">walker</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">samples</span><span class="p">[:,</span> <span class="n">walker</span><span class="p">,</span> <span class="n">i</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot parameters along MCMC runs</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;samples shape&#39;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">walkers_to_plot</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_parameters</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">bumps_parameter_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">walker_ind</span> <span class="ow">in</span> <span class="n">walkers_to_plot</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">samples</span><span class="p">[:,</span> <span class="n">walker_ind</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Walker </span><span class="si">{</span><span class="n">walker_ind</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;MCMC iteration&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(511, 7, 7)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>samples shape (5011, 20, 10)
 </pre></div>
 </div>
-<img alt="../../_images/9137974f099569d8fb26dcc39aac71464680715de42ca02b3c635695498c1f14.png" src="../../_images/9137974f099569d8fb26dcc39aac71464680715de42ca02b3c635695498c1f14.png" />
-<img alt="../../_images/6de771a14e367ccd120f092b2b99546c4e3cce7e60b61c08dbc0fed484427449.png" src="../../_images/6de771a14e367ccd120f092b2b99546c4e3cce7e60b61c08dbc0fed484427449.png" />
-<img alt="../../_images/310ea66505f5511cdcd45cec366d95c63dbe2ee7127265978a5dd15797fda187.png" src="../../_images/310ea66505f5511cdcd45cec366d95c63dbe2ee7127265978a5dd15797fda187.png" />
-<img alt="../../_images/6f03777ed43f3405a6a0d6a673be7ed2a1278f0e9f3b2c8f96a0111e75570aaa.png" src="../../_images/6f03777ed43f3405a6a0d6a673be7ed2a1278f0e9f3b2c8f96a0111e75570aaa.png" />
-<img alt="../../_images/d864dd2ced18cf704fd1dc14f6628ccdedab275816a8513c20db2bfc55cfdfd9.png" src="../../_images/d864dd2ced18cf704fd1dc14f6628ccdedab275816a8513c20db2bfc55cfdfd9.png" />
-<img alt="../../_images/d6970c78f65cfa5e81f72e4f40056f4cbfe2dee883d04cf93f60b9e756b21c04.png" src="../../_images/d6970c78f65cfa5e81f72e4f40056f4cbfe2dee883d04cf93f60b9e756b21c04.png" />
-<img alt="../../_images/3bbeb89046ade32b0e88769b69f9f6cbbc29cb22ea707062d6698cbe02f3f29b.png" src="../../_images/3bbeb89046ade32b0e88769b69f9f6cbbc29cb22ea707062d6698cbe02f3f29b.png" />
+<img alt="../../_images/refinement_bumps_dream_22_1.png" src="../../_images/refinement_bumps_dream_22_1.png" />
 </div>
 </div>
+<p>Next, we’ll make a simple corner to visualize the full joint probability distribution over the parameters</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">corner</span>
-<span class="n">corner</span><span class="o">.</span><span class="n">corner</span><span class="p">(</span><span class="n">samples_flat</span><span class="p">);</span>
 
-<span class="n">samples_flat</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">n_throw_away</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># if we need to throw away more equilibration steps</span>
+
+<span class="c1"># flatten samples array</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;samples shape&#39;</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">samples_flat</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[</span><span class="n">n_throw_away</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_parameters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;samples_flat shape&#39;</span><span class="p">,</span> <span class="n">samples_flat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># corner plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">corner</span><span class="o">.</span><span class="n">corner</span><span class="p">(</span><span class="n">samples_flat</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">bumps_parameter_names</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:root:Too few points to create valid contours
-WARNING:root:Too few points to create valid contours
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>samples shape (5011, 20, 10)
+samples_flat shape (80220, 10)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3577, 7)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 864x864 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="../../_images/e5b05f286fb2d3a856029e0acf58c17bb5bf9950e5fe97e57ff4a530a8ae9bdd.png" src="../../_images/e5b05f286fb2d3a856029e0acf58c17bb5bf9950e5fe97e57ff4a530a8ae9bdd.png" />
+<img alt="../../_images/refinement_bumps_dream_24_2.png" src="../../_images/refinement_bumps_dream_24_2.png" />
 </div>
 </div>
+<p>One can also visualize the MCMC data directly with the bumps-functionality.<br />
+The figure produce may look somewhat strange due to naming of parameters inside easyDiffraction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -677,24 +883,28 @@ WARNING:root:Too few points to create valid contours
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              Parameter       mean  median    best [   68% interval] [   95% interval]
- 1 p103996675068078428256957165594636099134 -0.463(90)  -0.476  -0.485 [  -0.50   -0.39] [  -0.74   -0.24]
- 2 p115130398186402342168768027308051150371  0.471(43)   0.478   0.485 [   0.43    0.49] [   0.36    0.59]
- 3 p26851921218028266521610302375394125362  242.2(39)  240.90  240.00 [  239.2   246.1] [  238.0   252.0]
- 4 p288274559095425807889621236863919536742  1.198(31)   1.204   1.208 [   1.19    1.21] [   1.09    1.22]
- 5 p28930811549294052832347709268866444026  197.4(16) 197.089 196.923 [ 196.08  199.09] [ 193.57  200.49]
- 6 p58761998728139009870481080864610135086 0.1219(21) 0.12192 0.12237 [ 0.1210  0.1228] [ 0.1161  0.1259]
- 7 p97628043528038207855652635674368028100  0.190(44)   0.194   0.198 [   0.16    0.21] [   0.07    0.34]
+ 1 p109728691140263660849399968770219679305  1.209(21)  1.2113  1.2111 [  1.208   1.215] [  1.191   1.218]
+ 2 p128472947866637389279160630254056508292  0.196(15)  0.1986  0.1962 [  0.187   0.208] [  0.149   0.216]
+ 3 p164387166016145265386718001774446713564  0.480(15)  0.4825  0.4801 [  0.475   0.490] [  0.426   0.497]
+ 4 p242618186496329213419010020371187771800 197.11(96) 197.109 197.233 [ 196.37  197.84] [ 195.52  199.12]
+ 5 p26451713086068717653600980058806147694 5.39578(32) 5.39573 5.39574 [ 5.3956  5.3959] [ 5.3955  5.3969]
+ 6 p291692438697284514642669042245653534278 6.95594(60) 6.95583 6.95585 [ 6.9556  6.9560] [ 6.9555  6.9580]
+ 7 p31604684319809757748224974131710916750 0.1558(66)  0.1571  0.1572 [  0.155   0.159] [  0.124   0.160]
+ 8 p318650478931261213421867884443581640014 8.47704(44) 8.47697 8.47691 [ 8.4768  8.4771] [ 8.4767  8.4786]
+ 9 p69361991237832820332050235882293000806 -0.478(30)  -0.483  -0.478 [  -0.50   -0.46] [  -0.52   -0.38]
+10 p86030810922056330715297791490710993013  240.1(19) 239.888 239.542 [ 238.95  240.87] [ 237.97  245.51]
 
-Statistics and plots based on 3577 samples (100.0% of total samples drawn)
+Statistics and plots based on 100220 samples (100.0% of total samples drawn)
 </pre></div>
 </div>
-<img alt="../../_images/8df5fae0b1bbec09ec87bf2a5c9081d39d8618f9f978520bfc19160d5931d5ea.png" src="../../_images/8df5fae0b1bbec09ec87bf2a5c9081d39d8618f9f978520bfc19160d5931d5ea.png" />
-<img alt="../../_images/82dba8baadbfd320469506bc24fabb1d2958b87da12f035051ade704cb3fd91b.png" src="../../_images/82dba8baadbfd320469506bc24fabb1d2958b87da12f035051ade704cb3fd91b.png" />
-<img alt="../../_images/8fa5387781f443a503c144daa6e6006c2f198a1cf116f4a4722f1f8ad031f851.png" src="../../_images/8fa5387781f443a503c144daa6e6006c2f198a1cf116f4a4722f1f8ad031f851.png" />
-<img alt="../../_images/9ef1a6906aa5a67beb7db3b1a99fb0fe0631cb1c19d470bb33796c1fcef63daf.png" src="../../_images/9ef1a6906aa5a67beb7db3b1a99fb0fe0631cb1c19d470bb33796c1fcef63daf.png" />
-<img alt="../../_images/ffa9656b7b4d53122c1e97a79d921cfb8e253e8ee54ecbe2821a82c8e6b3a90e.png" src="../../_images/ffa9656b7b4d53122c1e97a79d921cfb8e253e8ee54ecbe2821a82c8e6b3a90e.png" />
+<img alt="../../_images/refinement_bumps_dream_26_1.png" src="../../_images/refinement_bumps_dream_26_1.png" />
+<img alt="../../_images/refinement_bumps_dream_26_2.png" src="../../_images/refinement_bumps_dream_26_2.png" />
+<img alt="../../_images/refinement_bumps_dream_26_3.png" src="../../_images/refinement_bumps_dream_26_3.png" />
+<img alt="../../_images/refinement_bumps_dream_26_4.png" src="../../_images/refinement_bumps_dream_26_4.png" />
+<img alt="../../_images/refinement_bumps_dream_26_5.png" src="../../_images/refinement_bumps_dream_26_5.png" />
 </div>
 </div>
+</section>
 </section>
 
 
@@ -709,7 +919,7 @@ Statistics and plots based on 3577 samples (100.0% of total samples drawn)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Refinement with emcee: Neutron data for PbSO4</p>
+            <p class="prev-next-title">Refinement of PbSO4 with emcee</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../developer/index.html" title="next page">
@@ -739,9 +949,8 @@ Statistics and plots based on 3577 samples (100.0% of total samples drawn)
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  
 
   </body>
 </html>
