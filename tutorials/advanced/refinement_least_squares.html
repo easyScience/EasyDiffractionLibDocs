@@ -434,16 +434,56 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: CrysPy is not installed
+Warning: CrysFML is not installed
+Warning: GSAS-2 is not installed
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># esyScience, diffraction</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib</span> <span class="kn">import</span> <span class="n">Phases</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.sample</span> <span class="kn">import</span> <span class="n">Sample</span> <span class="k">as</span> <span class="n">Job</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.interface</span> <span class="kn">import</span> <span class="n">InterfaceFactory</span> <span class="k">as</span> <span class="n">Calculator</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.elements.Experiments.Pattern</span> <span class="kn">import</span> <span class="n">Pattern1D</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.16</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">easyDiffractionLib</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">16</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib</span> <span class="kn">import</span> <span class="n">Phase</span><span class="p">,</span> <span class="n">Phases</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.Profiles.P1D</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">Instrument1DCWParameters</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">Instrument1DTOFParameters</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.interface</span> <span class="kn">import</span> <span class="n">InterfaceFactory</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.Interfaces.types</span> <span class="kn">import</span> <span class="n">Powder</span><span class="p">,</span> <span class="n">Neutron</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.Profiles.P1D</span> <span class="kn">import</span> <span class="n">Powder1DParameters</span> <span class="k">as</span> <span class="n">Pattern1D</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.16</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">easyDiffractionLib</span><span class="o">/</span><span class="n">interface</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.0.1&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.Interfaces</span> <span class="kn">import</span> <span class="n">InterfaceTemplate</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">easyCore.Objects.Inferface</span> <span class="kn">import</span> <span class="n">InterfaceFactoryTemplate</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">class</span> <span class="nc">InterfaceFactory</span><span class="p">(</span><span class="n">InterfaceFactoryTemplate</span><span class="p">):</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.16</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">easyDiffractionLib</span><span class="o">/</span><span class="n">Interfaces</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">35</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="c1"># TODO make this a proper message (use logging?)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning: GSAS-2 is not installed&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">35</span> <span class="kn">from</span> <span class="nn">easyDiffractionLib.Interfaces.interfaceTemplate</span> <span class="kn">import</span> <span class="n">InterfaceTemplate</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.16</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">easyDiffractionLib</span><span class="o">/</span><span class="n">Interfaces</span><span class="o">/</span><span class="n">interfaceTemplate</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">List</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">easyCore</span> <span class="kn">import</span> <span class="n">np</span><span class="p">,</span> <span class="n">borg</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">easyCore.Utils.json</span> <span class="kn">import</span> <span class="n">MSONable</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">exp_type_strings</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="s1">&#39;radiation_options&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="s1">&#39;exp_type_options&#39;</span><span class="p">:</span>    <span class="p">[</span><span class="s1">&#39;CW&#39;</span><span class="p">,</span> <span class="s1">&#39;TOF&#39;</span><span class="p">],</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="s1">&#39;polarization_options&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;unp&#39;</span><span class="p">,</span> <span class="s1">&#39;pol&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">class</span> <span class="nc">InterfaceTemplate</span><span class="p">(</span><span class="n">MSONable</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;easyCore.Utils.json&#39;
 </pre></div>
 </div>
 </div>

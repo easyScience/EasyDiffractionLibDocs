@@ -479,16 +479,16 @@ title="Print to PDF"
 <li><p>Simulated diffraction pattern <span class="math notranslate nohighlight">\(y^\text{sim}=f(\boldsymbol{x})\)</span></p></li>
 </ul>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35aa265a-47e9-4e53-946d-fdc82a9821e5">
-<span class="eqno">(1)<a class="headerlink" href="#equation-35aa265a-47e9-4e53-946d-fdc82a9821e5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-be79a936-85ff-43d6-a99c-e49105362955">
+<span class="eqno">(1)<a class="headerlink" href="#equation-be79a936-85ff-43d6-a99c-e49105362955" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this headline">¶</a></h3>
 <p>We assume independent and (almost)identical normal distributed errors. But we take into account heteroscedasticity that is commonly done for diffraction data, i.e. uncertainty scales with sqrt of intensity, which be achived by modeling the data as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ebd9a77-0e98-4ee7-9aba-f0a14e66dc70">
-<span class="eqno">(2)<a class="headerlink" href="#equation-7ebd9a77-0e98-4ee7-9aba-f0a14e66dc70" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2837ed47-11d0-4fd1-b9b2-901573e11cc0">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2837ed47-11d0-4fd1-b9b2-901573e11cc0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \large
 y^\text{exp}_i = y^\text{sim}_i + \epsilon_i \\
 \large
@@ -496,8 +496,8 @@ y^\text{exp}_i = y^\text{sim}_i + \epsilon_i \\
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon_i\)</span> is the error between the experimental (exp) and simulated (sim) diffraction patterns.</p>
 <p>And then we get a likelihood that looks like</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a88c8724-55e7-4b3c-b0c5-f6e7557cd564">
-<span class="eqno">(3)<a class="headerlink" href="#equation-a88c8724-55e7-4b3c-b0c5-f6e7557cd564" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-410c5df9-9917-4548-889e-57894138a253">
+<span class="eqno">(3)<a class="headerlink" href="#equation-410c5df9-9917-4548-889e-57894138a253" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (- \frac{\sum_i (y^\text{sim}_i- y^\text{exp}_i)^2 }{\sigma^2 y^\text{exp}_i}\right )}
 \end{equation}\]</div>
@@ -537,14 +537,14 @@ P(D|\boldsymbol{x}) \propto \exp{\left (- \frac{\sum_i (y^\text{sim}_i- y^\text{
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">emcee</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">emcee</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">corner</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">)</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;emcee&#39;
 </pre></div>
 </div>
 </div>
