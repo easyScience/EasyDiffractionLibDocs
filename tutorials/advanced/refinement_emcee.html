@@ -341,16 +341,16 @@ document.write(`
 <li><p>Simulated diffraction pattern <span class="math notranslate nohighlight">\(y^\text{sim}=f(\boldsymbol{x})\)</span></p></li>
 </ul>
 <p>The posterior for parameters is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3a517d5-3038-4561-bcdd-2404a5b6fda5">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f3a517d5-3038-4561-bcdd-2404a5b6fda5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-46b4fa40-19f7-4982-a566-8226ab4fb45c">
+<span class="eqno">(1)<a class="headerlink" href="#equation-46b4fa40-19f7-4982-a566-8226ab4fb45c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 \underbrace{P(\boldsymbol{x}|D)}_\text{Posterior} = \underbrace{P(D|\boldsymbol{x})}_\text{Likelihood}\, \, \underbrace{P(\boldsymbol{x})}_\text{Priors}
 \end{equation}\]</div>
 <section id="likelihood">
 <h3>Likelihood<a class="headerlink" href="#likelihood" title="Permalink to this heading">#</a></h3>
 <p>We assume independent and (almost)identical normal distributed errors. But we take into account heteroscedasticity that is commonly done for diffraction data, i.e. uncertainty scales with sqrt of intensity, which be achived by modeling the data as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3822d8a5-e466-494e-b99e-3ce9d61114f0">
-<span class="eqno">(2)<a class="headerlink" href="#equation-3822d8a5-e466-494e-b99e-3ce9d61114f0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-be816b7d-0618-463b-bb8b-cf1a0c998f66">
+<span class="eqno">(2)<a class="headerlink" href="#equation-be816b7d-0618-463b-bb8b-cf1a0c998f66" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 y^\text{exp}_i = y^\text{sim}_i + \epsilon_i \\
 \large
@@ -358,8 +358,8 @@ y^\text{exp}_i = y^\text{sim}_i + \epsilon_i \\
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon_i\)</span> is the error between the experimental (exp) and simulated (sim) diffraction patterns.</p>
 <p>And then we get a likelihood that looks like</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a629ccf-231b-4618-84ef-eb0a3a06644f">
-<span class="eqno">(3)<a class="headerlink" href="#equation-4a629ccf-231b-4618-84ef-eb0a3a06644f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0177a3b5-50a5-43ae-aa4c-d84d64683df8">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0177a3b5-50a5-43ae-aa4c-d84d64683df8" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \large
 P(D|\boldsymbol{x}) \propto \exp{\left (- \frac{\sum_i (y^\text{sim}_i- y^\text{exp}_i)^2 }{\sigma^2 y^\text{exp}_i}\right )}
 \end{equation}\]</div>
