@@ -35,7 +35,7 @@ import xarray as xr
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;31mImportError[0m                               Traceback (most recent call last)
 Cell [0;32mIn[1], line 7[0m
 [1;32m      5[0m [38;5;66;03m# EasyScience, diffraction[39;00m
 [1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01measyDiffractionLib[39;00m [38;5;28;01mimport[39;00m Site, Phase, Phases
@@ -75,6 +75,6 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/e
 [1;32m     15[0m }
 [1;32m     18[0m [38;5;28;01mclass[39;00m [38;5;21;01mInterfaceTemplate[39;00m(MSONable, metaclass[38;5;241m=[39mABCMeta):
 
-[0;31mModuleNotFoundError[0m: No module named 'easyCore.Utils.io.json'
-ModuleNotFoundError: No module named 'easyCore.Utils.io.json'
+[0;31mImportError[0m: cannot import name 'MSONable' from 'easyCore.Utils.io.json' (/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Utils/io/json.py)
+ImportError: cannot import name 'MSONable' from 'easyCore.Utils.io.json' (/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Utils/io/json.py)
 
