@@ -17,22 +17,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-atom = Site.from_pars(label="Cl",
-                      specie="Cl",
-                      fract_x=0.0,
-                      fract_y=0.0,
-                      fract_z=0.0)
+viewer = py3Dmol.view()
+viewer.addModel(phase.to_cif_str(),'cif',{'doAssembly':True,'duplicateAssemblyAtoms':True,'normalizeAssembly':True})
+viewer.setStyle({'sphere':{'colorscheme':'Jmol','scale':.2},'stick':{'colorscheme':'Jmol', 'radius': 0.1}})
+viewer.addUnitCell()
+viewer.replicateUnitCell(2,2,2)
+viewer.zoomTo()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mAttributeError[0m                            Traceback (most recent call last)
-Cell [0;32mIn[3], line 1[0m
-[0;32m----> 1[0m atom [38;5;241m=[39m [43mSite[49m[38;5;241;43m.[39;49m[43mfrom_pars[49m(label[38;5;241m=[39m[38;5;124m"[39m[38;5;124mCl[39m[38;5;124m"[39m,
-[1;32m      2[0m                       specie[38;5;241m=[39m[38;5;124m"[39m[38;5;124mCl[39m[38;5;124m"[39m,
-[1;32m      3[0m                       fract_x[38;5;241m=[39m[38;5;241m0.0[39m,
-[1;32m      4[0m                       fract_y[38;5;241m=[39m[38;5;241m0.0[39m,
-[1;32m      5[0m                       fract_z[38;5;241m=[39m[38;5;241m0.0[39m)
+Cell [0;32mIn[6], line 2[0m
+[1;32m      1[0m viewer [38;5;241m=[39m py3Dmol[38;5;241m.[39mview()
+[0;32m----> 2[0m viewer[38;5;241m.[39maddModel([43mphase[49m[38;5;241;43m.[39;49m[43mto_cif_str[49m(),[38;5;124m'[39m[38;5;124mcif[39m[38;5;124m'[39m,{[38;5;124m'[39m[38;5;124mdoAssembly[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m,[38;5;124m'[39m[38;5;124mduplicateAssemblyAtoms[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m,[38;5;124m'[39m[38;5;124mnormalizeAssembly[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m})
+[1;32m      3[0m viewer[38;5;241m.[39msetStyle({[38;5;124m'[39m[38;5;124msphere[39m[38;5;124m'[39m:{[38;5;124m'[39m[38;5;124mcolorscheme[39m[38;5;124m'[39m:[38;5;124m'[39m[38;5;124mJmol[39m[38;5;124m'[39m,[38;5;124m'[39m[38;5;124mscale[39m[38;5;124m'[39m:[38;5;241m.2[39m},[38;5;124m'[39m[38;5;124mstick[39m[38;5;124m'[39m:{[38;5;124m'[39m[38;5;124mcolorscheme[39m[38;5;124m'[39m:[38;5;124m'[39m[38;5;124mJmol[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mradius[39m[38;5;124m'[39m: [38;5;241m0.1[39m}})
+[1;32m      4[0m viewer[38;5;241m.[39maddUnitCell()
 
-[0;31mAttributeError[0m: type object 'Site' has no attribute 'from_pars'
-AttributeError: type object 'Site' has no attribute 'from_pars'
+[0;31mAttributeError[0m: 'Phase' object has no attribute 'to_cif_str'
+AttributeError: 'Phase' object has no attribute 'to_cif_str'
 

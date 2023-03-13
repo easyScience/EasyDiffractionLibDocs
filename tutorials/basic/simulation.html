@@ -671,25 +671,11 @@ if (force === true) {
 <h3>Create an atom using <code class="docutils literal notranslate"><span class="pre">Site</span></code> interface<a class="headerlink" href="#create-an-atom-using-site-interface" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="o">.</span><span class="n">from_pars</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-                      <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-                      <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-                      <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-                      <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="o">.</span><span class="n">from_pars</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                       <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                       <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                       <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                       <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: type object &#39;Site&#39; has no attribute &#39;from_pars&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
+            <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
+            <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+            <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+            <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -729,6 +715,19 @@ if (force === true) {
 <span class="n">viewer</span><span class="o">.</span><span class="n">addUnitCell</span><span class="p">()</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">replicateUnitCell</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">zoomTo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">viewer</span> <span class="o">=</span> <span class="n">py3Dmol</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">viewer</span><span class="o">.</span><span class="n">addModel</span><span class="p">(</span><span class="n">phase</span><span class="o">.</span><span class="n">to_cif_str</span><span class="p">(),</span><span class="s1">&#39;cif&#39;</span><span class="p">,{</span><span class="s1">&#39;doAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;duplicateAssemblyAtoms&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;normalizeAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">viewer</span><span class="o">.</span><span class="n">setStyle</span><span class="p">({</span><span class="s1">&#39;sphere&#39;</span><span class="p">:{</span><span class="s1">&#39;colorscheme&#39;</span><span class="p">:</span><span class="s1">&#39;Jmol&#39;</span><span class="p">,</span><span class="s1">&#39;scale&#39;</span><span class="p">:</span><span class="mf">.2</span><span class="p">},</span><span class="s1">&#39;stick&#39;</span><span class="p">:{</span><span class="s1">&#39;colorscheme&#39;</span><span class="p">:</span><span class="s1">&#39;Jmol&#39;</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}})</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">viewer</span><span class="o">.</span><span class="n">addUnitCell</span><span class="p">()</span>
+
+<span class="ne">AttributeError</span>: &#39;Phase&#39; object has no attribute &#39;to_cif_str&#39;
 </pre></div>
 </div>
 </div>
