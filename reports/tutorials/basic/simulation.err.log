@@ -17,22 +17,109 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-viewer = py3Dmol.view()
-viewer.addModel(phase.to_cif_str(),'cif',{'doAssembly':True,'duplicateAssemblyAtoms':True,'normalizeAssembly':True})
-viewer.setStyle({'sphere':{'colorscheme':'Jmol','scale':.2},'stick':{'colorscheme':'Jmol', 'radius': 0.1}})
-viewer.addUnitCell()
-viewer.replicateUnitCell(2,2,2)
-viewer.zoomTo()
+x_data = np.linspace(20, 170, 500)
+_ = job.create_simulation(x_data)
+y_data = np.array(data['sim_NaCl'])
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mAttributeError[0m                            Traceback (most recent call last)
-Cell [0;32mIn[6], line 2[0m
-[1;32m      1[0m viewer [38;5;241m=[39m py3Dmol[38;5;241m.[39mview()
-[0;32m----> 2[0m viewer[38;5;241m.[39maddModel([43mphase[49m[38;5;241;43m.[39;49m[43mto_cif_str[49m(),[38;5;124m'[39m[38;5;124mcif[39m[38;5;124m'[39m,{[38;5;124m'[39m[38;5;124mdoAssembly[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m,[38;5;124m'[39m[38;5;124mduplicateAssemblyAtoms[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m,[38;5;124m'[39m[38;5;124mnormalizeAssembly[39m[38;5;124m'[39m:[38;5;28;01mTrue[39;00m})
-[1;32m      3[0m viewer[38;5;241m.[39msetStyle({[38;5;124m'[39m[38;5;124msphere[39m[38;5;124m'[39m:{[38;5;124m'[39m[38;5;124mcolorscheme[39m[38;5;124m'[39m:[38;5;124m'[39m[38;5;124mJmol[39m[38;5;124m'[39m,[38;5;124m'[39m[38;5;124mscale[39m[38;5;124m'[39m:[38;5;241m.2[39m},[38;5;124m'[39m[38;5;124mstick[39m[38;5;124m'[39m:{[38;5;124m'[39m[38;5;124mcolorscheme[39m[38;5;124m'[39m:[38;5;124m'[39m[38;5;124mJmol[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mradius[39m[38;5;124m'[39m: [38;5;241m0.1[39m}})
-[1;32m      4[0m viewer[38;5;241m.[39maddUnitCell()
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+Cell [0;32mIn[15], line 2[0m
+[1;32m      1[0m x_data [38;5;241m=[39m np[38;5;241m.[39mlinspace([38;5;241m20[39m, [38;5;241m170[39m, [38;5;241m500[39m)
+[0;32m----> 2[0m _ [38;5;241m=[39m [43mjob[49m[38;5;241;43m.[39;49m[43mcreate_simulation[49m[43m([49m[43mx_data[49m[43m)[49m
+[1;32m      3[0m y_data [38;5;241m=[39m np[38;5;241m.[39marray(data[[38;5;124m'[39m[38;5;124msim_NaCl[39m[38;5;124m'[39m])
 
-[0;31mAttributeError[0m: 'Phase' object has no attribute 'to_cif_str'
-AttributeError: 'Phase' object has no attribute 'to_cif_str'
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Jobs.py:79[0m, in [0;36mJobBase_1D.create_simulation[0;34m(self, tth, simulation_name, **kwargs)[0m
+[1;32m     74[0m     coord_name [38;5;241m=[39m tth[38;5;241m.[39mname
+[1;32m     75[0m x, f [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mdatastore[38;5;241m.[39mstore[coord_name][38;5;241m.[39measyCore[38;5;241m.[39mfit_prep(
+[1;32m     76[0m     [38;5;28mself[39m[38;5;241m.[39minterface[38;5;241m.[39mfit_func,
+[1;32m     77[0m     bdims[38;5;241m=[39mxr[38;5;241m.[39mbroadcast([38;5;28mself[39m[38;5;241m.[39mdatastore[38;5;241m.[39mstore[coord_name][38;5;241m.[39mtranspose()),
+[1;32m     78[0m )
+[0;32m---> 79[0m y [38;5;241m=[39m [43mxr[49m[38;5;241;43m.[39;49m[43mapply_ufunc[49m[43m([49m[43mf[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43mx[49m[43m,[49m[43m [49m[43mkwargs[49m[38;5;241;43m=[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     80[0m y[38;5;241m.[39mname [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_y_axis_prefix [38;5;241m+[39m [38;5;28mself[39m[38;5;241m.[39mname [38;5;241m+[39m [38;5;124m"[39m[38;5;124m_sim[39m[38;5;124m"[39m
+[1;32m     81[0m [38;5;28;01mif[39;00m simulation_name [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:1165[0m, in [0;36mapply_ufunc[0;34m(func, input_core_dims, output_core_dims, exclude_dims, vectorize, join, dataset_join, dataset_fill_value, keep_attrs, kwargs, dask, output_dtypes, output_sizes, meta, dask_gufunc_kwargs, *args)[0m
+[1;32m   1163[0m [38;5;66;03m# feed DataArray apply_variable_ufunc through apply_dataarray_vfunc[39;00m
+[1;32m   1164[0m [38;5;28;01melif[39;00m [38;5;28many[39m([38;5;28misinstance[39m(a, DataArray) [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m args):
+[0;32m-> 1165[0m     [38;5;28;01mreturn[39;00m [43mapply_dataarray_vfunc[49m[43m([49m
+[1;32m   1166[0m [43m        [49m[43mvariables_vfunc[49m[43m,[49m
+[1;32m   1167[0m [43m        [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m
+[1;32m   1168[0m [43m        [49m[43msignature[49m[38;5;241;43m=[39;49m[43msignature[49m[43m,[49m
+[1;32m   1169[0m [43m        [49m[43mjoin[49m[38;5;241;43m=[39;49m[43mjoin[49m[43m,[49m
+[1;32m   1170[0m [43m        [49m[43mexclude_dims[49m[38;5;241;43m=[39;49m[43mexclude_dims[49m[43m,[49m
+[1;32m   1171[0m [43m        [49m[43mkeep_attrs[49m[38;5;241;43m=[39;49m[43mkeep_attrs[49m[43m,[49m
+[1;32m   1172[0m [43m    [49m[43m)[49m
+[1;32m   1173[0m [38;5;66;03m# feed Variables directly through apply_variable_ufunc[39;00m
+[1;32m   1174[0m [38;5;28;01melif[39;00m [38;5;28many[39m([38;5;28misinstance[39m(a, Variable) [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m args):
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:290[0m, in [0;36mapply_dataarray_vfunc[0;34m(func, signature, join, exclude_dims, keep_attrs, *args)[0m
+[1;32m    285[0m result_coords [38;5;241m=[39m build_output_coords(
+[1;32m    286[0m     args, signature, exclude_dims, combine_attrs[38;5;241m=[39mkeep_attrs
+[1;32m    287[0m )
+[1;32m    289[0m data_vars [38;5;241m=[39m [[38;5;28mgetattr[39m(a, [38;5;124m"[39m[38;5;124mvariable[39m[38;5;124m"[39m, a) [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m args]
+[0;32m--> 290[0m result_var [38;5;241m=[39m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43mdata_vars[49m[43m)[49m
+[1;32m    292[0m [38;5;28;01mif[39;00m signature[38;5;241m.[39mnum_outputs [38;5;241m>[39m [38;5;241m1[39m:
+[1;32m    293[0m     out [38;5;241m=[39m [38;5;28mtuple[39m(
+[1;32m    294[0m         DataArray(variable, coords, name[38;5;241m=[39mname, fastpath[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m    295[0m         [38;5;28;01mfor[39;00m variable, coords [38;5;129;01min[39;00m [38;5;28mzip[39m(result_var, result_coords)
+[1;32m    296[0m     )
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:733[0m, in [0;36mapply_variable_ufunc[0;34m(func, signature, exclude_dims, dask, output_dtypes, vectorize, keep_attrs, dask_gufunc_kwargs, *args)[0m
+[1;32m    728[0m     [38;5;28;01mif[39;00m vectorize:
+[1;32m    729[0m         func [38;5;241m=[39m _vectorize(
+[1;32m    730[0m             func, signature, output_dtypes[38;5;241m=[39moutput_dtypes, exclude_dims[38;5;241m=[39mexclude_dims
+[1;32m    731[0m         )
+[0;32m--> 733[0m result_data [38;5;241m=[39m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43minput_data[49m[43m)[49m
+[1;32m    735[0m [38;5;28;01mif[39;00m signature[38;5;241m.[39mnum_outputs [38;5;241m==[39m [38;5;241m1[39m:
+[1;32m    736[0m     result_data [38;5;241m=[39m (result_data,)
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Datasets/xarray.py:658[0m, in [0;36measyCoreDataarrayAccessor.fit_prep.<locals>.func[0;34m(x, vectorize, *args, **kwargs)[0m
+[1;32m    656[0m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(x_new[38;5;241m.[39mshape) [38;5;241m>[39m [38;5;241m1[39m [38;5;129;01mand[39;00m x_new[38;5;241m.[39mshape[[38;5;241m1[39m] [38;5;241m==[39m [38;5;241m1[39m:
+[1;32m    657[0m         x_new [38;5;241m=[39m x_new[38;5;241m.[39mreshape(([38;5;241m-[39m[38;5;241m1[39m))
+[0;32m--> 658[0m     result [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mcompute_func[49m[43m([49m[43mx_new[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    659[0m [38;5;28;01melse[39;00m:
+[1;32m    660[0m     result [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mcompute_func(
+[1;32m    661[0m         [38;5;241m*[39m[d [38;5;28;01mfor[39;00m d [38;5;129;01min[39;00m [x, args] [38;5;28;01mif[39;00m [38;5;28misinstance[39m(d, np[38;5;241m.[39mndarray)],
+[1;32m    662[0m         [38;5;241m*[39m[d [38;5;28;01mfor[39;00m d [38;5;129;01min[39;00m args [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(d, np[38;5;241m.[39mndarray)],
+[1;32m    663[0m         [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    664[0m     )
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Objects/Inferface.py:137[0m, in [0;36mInterfaceFactoryTemplate.fit_func.<locals>.__fit_func[0;34m(*args, **kwargs)[0m
+[1;32m    136[0m [38;5;28;01mdef[39;00m [38;5;21m__fit_func[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[0;32m--> 137[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m__interface_obj[49m[38;5;241;43m.[39;49m[43mfit_func[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Interfaces/cryspyV2.py:709[0m, in [0;36mCryspyV2.fit_func[0;34m(self, x_array, *args, **kwargs)[0m
+[1;32m    707[0m [38;5;28;01mdef[39;00m [38;5;21mfit_func[39m([38;5;28mself[39m, x_array: np[38;5;241m.[39mndarray, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs) [38;5;241m-[39m[38;5;241m>[39m Union[np[38;5;241m.[39mndarray, [38;5;28;01mNone[39;00m]:
+[1;32m    708[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39m_internal [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m--> 709[0m         calculation, [38;5;28mself[39m[38;5;241m.[39m_last_callback [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_internal[49m[38;5;241;43m.[39;49m[43mfull_callback[49m[43m([49m
+[1;32m    710[0m [43m            [49m[43mx_array[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m
+[1;32m    711[0m [43m        [49m[43m)[49m
+[1;32m    712[0m         [38;5;28;01mreturn[39;00m calculation
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Interfaces/cryspyV2.py:555[0m, in [0;36mUPol.full_callback[0;34m(self, x_array, *args, **kwargs)[0m
+[1;32m    549[0m [38;5;28;01mdef[39;00m [38;5;21mfull_callback[39m([38;5;28mself[39m, x_array: np[38;5;241m.[39mndarray, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs) [38;5;241m-[39m[38;5;241m>[39m np[38;5;241m.[39mndarray:
+[1;32m    550[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[1;32m    551[0m [38;5;124;03m    Function to perform a fit.[39;00m
+[1;32m    552[0m [38;5;124;03m    :param x_array: points to be calculated at[39;00m
+[1;32m    553[0m [38;5;124;03m    :return: calculated points[39;00m
+[1;32m    554[0m [38;5;124;03m    """[39;00m
+[0;32m--> 555[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mcalculator[49m[38;5;241;43m.[39;49m[43mfull_calculate[49m[43m([49m[43mx_array[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/calculators/cryspy.py:532[0m, in [0;36mCryspy.full_calculate[0;34m(self, x_array, **kwargs)[0m
+[1;32m    530[0m args [38;5;241m=[39m x_array
+[1;32m    531[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mtype [38;5;241m==[39m [38;5;124m"[39m[38;5;124mpowder1DCW[39m[38;5;124m"[39m:
+[0;32m--> 532[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mpowder_1d_calculate[49m[43m([49m[43margs[49m[43m,[49m[43m [49m[43mfull_return[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    533[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mtype [38;5;241m==[39m [38;5;124m"[39m[38;5;124mpowder1DTOF[39m[38;5;124m"[39m:
+[1;32m    534[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39mpowder_1d_tof_calculate(args, full_return[38;5;241m=[39m[38;5;28;01mTrue[39;00m, [38;5;241m*[39m[38;5;241m*[39mkwargs)
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/calculators/cryspy.py:313[0m, in [0;36mCryspy.powder_1d_calculate[0;34m(self, x_array, full_return, **kwargs)[0m
+[1;32m    311[0m [38;5;28;01mfor[39;00m key_inner [38;5;129;01min[39;00m [[38;5;124m"[39m[38;5;124mpd_instr_resolution[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124msetup[39m[38;5;124m"[39m]:
+[1;32m    312[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mhasattr[39m([38;5;28mself[39m[38;5;241m.[39mmodel, key_inner):
+[0;32m--> 313[0m         [38;5;28msetattr[39m([38;5;28mself[39m[38;5;241m.[39mmodel, key_inner, [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mstorage[49m[43m[[49m[43mkey_inner[49m[43m][49m)
+[1;32m    315[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mpolarized:
+[1;32m    316[0m     [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mpol_fn[39m[38;5;124m"[39m [38;5;129;01min[39;00m kwargs[38;5;241m.[39mkeys():
+
+[0;31mKeyError[0m: 'pd_instr_resolution'
+KeyError: 'pd_instr_resolution'
 

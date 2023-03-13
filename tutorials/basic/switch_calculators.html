@@ -675,25 +675,11 @@ if (force === true) {
 <h3>Create an atom using <code class="docutils literal notranslate"><span class="pre">Site</span></code> interface<a class="headerlink" href="#create-an-atom-using-site-interface" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="o">.</span><span class="n">from_pars</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-                      <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-                      <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-                      <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-                      <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="o">.</span><span class="n">from_pars</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                       <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                       <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                       <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                       <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: type object &#39;Site&#39; has no attribute &#39;from_pars&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atom</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
+           <span class="n">specie</span><span class="o">=</span><span class="s2">&quot;Cl&quot;</span><span class="p">,</span>
+           <span class="n">fract_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+           <span class="n">fract_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+           <span class="n">fract_z</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -728,11 +714,64 @@ if (force === true) {
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">viewer</span> <span class="o">=</span> <span class="n">py3Dmol</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">addModel</span><span class="p">(</span><span class="n">phase</span><span class="o">.</span><span class="n">to_cif_str</span><span class="p">(),</span><span class="s1">&#39;cif&#39;</span><span class="p">,{</span><span class="s1">&#39;doAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;duplicateAssemblyAtoms&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;normalizeAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">addModel</span><span class="p">(</span><span class="n">phase</span><span class="o">.</span><span class="n">cif</span><span class="p">,</span><span class="s1">&#39;cif&#39;</span><span class="p">,{</span><span class="s1">&#39;doAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;duplicateAssemblyAtoms&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;normalizeAssembly&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">setStyle</span><span class="p">({</span><span class="s1">&#39;sphere&#39;</span><span class="p">:{</span><span class="s1">&#39;colorscheme&#39;</span><span class="p">:</span><span class="s1">&#39;Jmol&#39;</span><span class="p">,</span><span class="s1">&#39;scale&#39;</span><span class="p">:</span><span class="mf">.2</span><span class="p">},</span><span class="s1">&#39;stick&#39;</span><span class="p">:{</span><span class="s1">&#39;colorscheme&#39;</span><span class="p">:</span><span class="s1">&#39;Jmol&#39;</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}})</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">addUnitCell</span><span class="p">()</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">replicateUnitCell</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">zoomTo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="3dmolviewer_1678698487794941"  style="position: relative; width: 640px; height: 480px">
+        <p id="3dmolwarning_1678698487794941" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js');
+}
+
+var viewer_1678698487794941 = null;
+var warn = document.getElementById("3dmolwarning_1678698487794941");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_1678698487794941 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1678698487794941"),{backgroundColor:"white"});
+viewer_1678698487794941.zoomTo();
+	viewer_1678698487794941.addModel("data_salt\n_cell_length_a 3.00000000\n_cell_length_b 3.00000000\n_cell_length_c 3.00000000\n_cell_angle_alpha 90.00000000\n_cell_angle_beta 90.00000000\n_cell_angle_gamma 90.00000000\n_space_group_name_H-M_ref 'F m -3 m'\n\n\nloop_\n_atom_site_label\n_atom_site_type_symbol\n_atom_site_fract_x\n_atom_site_fract_y\n_atom_site_fract_z\n_atom_site_occupancy\nCl Cl 0.00000000 0.00000000 0.00000000 1.00000000\nNa Na 0.5 0.5 0.00000000 0.5\n","cif",{"doAssembly": true, "duplicateAssemblyAtoms": true, "normalizeAssembly": true});
+	viewer_1678698487794941.setStyle({"sphere": {"colorscheme": "Jmol", "scale": 0.2}, "stick": {"colorscheme": "Jmol", "radius": 0.1}});
+	viewer_1678698487794941.addUnitCell();
+	viewer_1678698487794941.replicateUnitCell(2,2,2);
+	viewer_1678698487794941.zoomTo();
+viewer_1678698487794941.render();
+});
+</script></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;py3Dmol.view at 0x7f7d6db47910&gt;
 </pre></div>
 </div>
 </div>
@@ -778,11 +817,22 @@ if (force === true) {
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current calculator engine: CrysPy
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Available calculator engines: </span><span class="si">{</span><span class="n">job</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">available_interfaces</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Available calculators for CW: </span><span class="si">{</span><span class="n">job</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">interface_compatability</span><span class="p">(</span><span class="s1">&#39;Npowder1DCWunp&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available calculator engines: [&#39;CrysPy&#39;, &#39;CrysFML&#39;]
+Available calculators for CW: [&#39;CrysPy&#39;, &#39;CrysFML&#39;]
 </pre></div>
 </div>
 </div>
@@ -822,6 +872,108 @@ if (force === true) {
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">create_simulation</span><span class="p">(</span><span class="n">x_data</span><span class="p">)</span>
 <span class="n">y_data_cryspy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sim_NaCl&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">create_simulation</span><span class="p">(</span><span class="n">x_data</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">y_data_cryspy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sim_NaCl&#39;</span><span class="p">])</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Jobs.py:79,</span> in <span class="ni">JobBase_1D.create_simulation</span><span class="nt">(self, tth, simulation_name, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="n">coord_name</span> <span class="o">=</span> <span class="n">tth</span><span class="o">.</span><span class="n">name</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span> <span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datastore</span><span class="o">.</span><span class="n">store</span><span class="p">[</span><span class="n">coord_name</span><span class="p">]</span><span class="o">.</span><span class="n">easyCore</span><span class="o">.</span><span class="n">fit_prep</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span>     <span class="bp">self</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">fit_func</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="n">bdims</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datastore</span><span class="o">.</span><span class="n">store</span><span class="p">[</span><span class="n">coord_name</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()),</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span> <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">79</span> <span class="n">y</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">apply_ufunc</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="n">y</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_y_axis_prefix</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;_sim&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span> <span class="k">if</span> <span class="n">simulation_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:1165,</span> in <span class="ni">apply_ufunc</span><span class="nt">(func, input_core_dims, output_core_dims, exclude_dims, vectorize, join, dataset_join, dataset_fill_value, keep_attrs, kwargs, dask, output_dtypes, output_sizes, meta, dask_gufunc_kwargs, *args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1163</span> <span class="c1"># feed DataArray apply_variable_ufunc through apply_dataarray_vfunc</span>
+<span class="g g-Whitespace">   </span><span class="mi">1164</span> <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1165</span>     <span class="k">return</span> <span class="n">apply_dataarray_vfunc</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1166</span>         <span class="n">variables_vfunc</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span>         <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span>         <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span>         <span class="n">join</span><span class="o">=</span><span class="n">join</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span>         <span class="n">exclude_dims</span><span class="o">=</span><span class="n">exclude_dims</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span>         <span class="n">keep_attrs</span><span class="o">=</span><span class="n">keep_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="c1"># feed Variables directly through apply_variable_ufunc</span>
+<span class="g g-Whitespace">   </span><span class="mi">1174</span> <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">):</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:290,</span> in <span class="ni">apply_dataarray_vfunc</span><span class="nt">(func, signature, join, exclude_dims, keep_attrs, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="n">result_coords</span> <span class="o">=</span> <span class="n">build_output_coords</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="n">args</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">exclude_dims</span><span class="p">,</span> <span class="n">combine_attrs</span><span class="o">=</span><span class="n">keep_attrs</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">data_vars</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">290</span> <span class="n">result_var</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">data_vars</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">292</span> <span class="k">if</span> <span class="n">signature</span><span class="o">.</span><span class="n">num_outputs</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span>     <span class="n">out</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="n">DataArray</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">fastpath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nn">    295         for variable, coords</span> in <span class="ni">zip</span><span class="nt">(result_var, result_coords)</span>
+<span class="g g-Whitespace">    </span><span class="mi">296</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/xarray/core/computation.py:733,</span> in <span class="ni">apply_variable_ufunc</span><span class="nt">(func, signature, exclude_dims, dask, output_dtypes, vectorize, keep_attrs, dask_gufunc_kwargs, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">728</span>     <span class="k">if</span> <span class="n">vectorize</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">729</span>         <span class="n">func</span> <span class="o">=</span> <span class="n">_vectorize</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">730</span>             <span class="n">func</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">output_dtypes</span><span class="o">=</span><span class="n">output_dtypes</span><span class="p">,</span> <span class="n">exclude_dims</span><span class="o">=</span><span class="n">exclude_dims</span>
+<span class="g g-Whitespace">    </span><span class="mi">731</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">733</span> <span class="n">result_data</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">input_data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">735</span> <span class="k">if</span> <span class="n">signature</span><span class="o">.</span><span class="n">num_outputs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">736</span>     <span class="n">result_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">result_data</span><span class="p">,)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Datasets/xarray.py:658,</span> in <span class="ni">easyCoreDataarrayAccessor.fit_prep.&lt;locals&gt;.func</span><span class="nt">(x, vectorize, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_new</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x_new</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">657</span>         <span class="n">x_new</span> <span class="o">=</span> <span class="n">x_new</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">658</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_func</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">660</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_func</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">661</span>         <span class="o">*</span><span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">args</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)],</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span>         <span class="o">*</span><span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">args</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)],</span>
+<span class="g g-Whitespace">    </span><span class="mi">663</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyCore/Objects/Inferface.py:137,</span> in <span class="ni">InterfaceFactoryTemplate.fit_func.&lt;locals&gt;.__fit_func</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">def</span> <span class="nf">__fit_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__interface_obj</span><span class="o">.</span><span class="n">fit_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Interfaces/cryspyV2.py:709,</span> in <span class="ni">CryspyV2.fit_func</span><span class="nt">(self, x_array, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span> <span class="k">def</span> <span class="nf">fit_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">709</span>         <span class="n">calculation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_last_callback</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal</span><span class="o">.</span><span class="n">full_callback</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">710</span>             <span class="n">x_array</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">712</span>         <span class="k">return</span> <span class="n">calculation</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/Interfaces/cryspyV2.py:555,</span> in <span class="ni">UPol.full_callback</span><span class="nt">(self, x_array, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">549</span> <span class="k">def</span> <span class="nf">full_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">550</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span><span class="sd">     Function to perform a fit.</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span><span class="sd">     :param x_array: points to be calculated at</span>
+<span class="g g-Whitespace">    </span><span class="mi">553</span><span class="sd">     :return: calculated points</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">555</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculator</span><span class="o">.</span><span class="n">full_calculate</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/calculators/cryspy.py:532,</span> in <span class="ni">Cryspy.full_calculate</span><span class="nt">(self, x_array, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span> <span class="n">args</span> <span class="o">=</span> <span class="n">x_array</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;powder1DCW&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">532</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">powder_1d_calculate</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">full_return</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;powder1DTOF&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">powder_1d_tof_calculate</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">full_return</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/easyDiffractionLib/calculators/cryspy.py:313,</span> in <span class="ni">Cryspy.powder_1d_calculate</span><span class="nt">(self, x_array, full_return, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span> <span class="k">for</span> <span class="n">key_inner</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;pd_instr_resolution&quot;</span><span class="p">,</span> <span class="s2">&quot;setup&quot;</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">key_inner</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">313</span>         <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">key_inner</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">[</span><span class="n">key_inner</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarized</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span>     <span class="k">if</span> <span class="s2">&quot;pol_fn&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+
+<span class="ne">KeyError</span>: &#39;pd_instr_resolution&#39;
 </pre></div>
 </div>
 </div>
